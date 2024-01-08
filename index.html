@@ -8,42 +8,67 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css" media="screen">
 </head>
-<body>
-  <div class="info">
-    <img class="info__img" src="./assets/img/eisenhower-matrix.jpg">
-    <a class="info__more" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
-  </div>
-  <div class="form">
-    <p class="title">Add Item</p>
-    <div class="form__row">
-      <input class="form__input" id="new-task" type="text">
-      <button class="btn">Add</button>
-  </div>
-  <h3 class="title">Todo</h3>
-  <ul class="form__list" id="incompleted-tasks">
-    <li class="form__item">
-      <input class="form__checkbox" type="checkbox">
-      <label class="form__label">Pay Bills</label>
-      <input class="form__input form__input--transparent js-task" type="text">
-      <button class="btn js-edit">Edit</button>
-      <button class="btn-svg js-delete"><img class="btn-svg__img" src="./assets/icon/remove.svg"></button>
-    </li>
-    <li class="form__item edit-mode">
-      <input class="form__checkbox" type="checkbox">
-      <label class="form__label">Go Shopping</label>
-      <input class="form__input form__input--transparent js-task" type="text" value="Go Shopping">
-      <button class="btn js-edit">Save</button>
-      <button class="btn-svg js-delete"><img class="btn-svg__img" src="./assets/icon/remove.svg"></button>
-    </li>
-  </ul>
-  <h3 class="title">Completed</h3>
-  <ul class="form__list" id="completed-tasks">
-    <li class="form__item">
-      <input class="form__checkbox" type="checkbox" checked>
-      <label class="form__label">See the Doctor</label>
-      <input class="form__input form__input--transparent js-task" type="text">
-      <button class="btn js-edit">Edit</button>
-      <button class="btn-svg js-delete"><img class="btn-svg__img" src="./assets/icon/remove.svg"></button>
+<body class="wrapper">
+  <header class="header">
+    <div class="header__info info">
+      <img class="info__img" src="assets/img/eisenhower-matrix.jpg">
+      <a class="info__link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
+    </div>
+  </header>
+  <main>
+    <h1 class="visually-hidden">Todo App</h1>
+    <section class="section">
+      <h2 class="visually-hidden">Form</h2>
+      <form class="section__form form" action="#">
+        <fieldset class="form__fieldset">
+          <legend class="form__title title">Add Item
+            <label class="form__label-hidden" for="new-task"></label>
+          </legend>
+          <div class="form__row">
+            <input class="form__input form__input_wide" id="new-task" type="text">
+            <button type="button" class="btn">Add</button>
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <legend class="form__title title">Todo</legend>
+          <ul class="form__list form__list_incomplete">
+            <li class="form__item">
+              <input class="form__checkbox" type="checkbox">
+              <label class="form__label">Pay Bills</label>
+              <input class="form__input form__input_transparent" type="text">
+              <button type="button" class="btn js-edit">Edit</button>
+              <button type="button" class="btn-svg js-delete">
+                <img class="btn-svg__img" src="assets/icon/remove.svg">
+              </button>
+            </li>
+            <li class="form__item edit-mode">
+              <input class="form__checkbox" type="checkbox">
+              <label class="form__label">Go Shopping</label>
+              <input class="form__input form__input_transparent" type="text" value="Go Shopping">
+              <button type="button" class="btn js-edit">Save</button>
+              <button type="button" class="btn-svg js-delete">
+                <img class="btn-svg__img" src="assets/icon/remove.svg">
+              </button>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <legend class="form__title title">Completed</legend>
+          <ul class="form__list form__list_complete">
+            <li class="form__item">
+              <input class="form__checkbox" type="checkbox" checked>
+              <label class="form__label">See the Doctor</label>
+              <input class="form__input form__input_transparent" type="text">
+              <button type="button" class="btn js-edit">Edit</button>
+              <button type="button" class="btn-svg js-delete">
+                <img class="btn-svg__img" src="assets/icon/remove.svg">
+              </button>
+            </li>
+          </ul>
+        </fieldset>
+      </form>
+    </section>
+  </main>
   <script src="app.js"></script>
 </body>
 </html>
