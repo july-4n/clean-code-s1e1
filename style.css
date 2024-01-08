@@ -138,18 +138,18 @@ input, button {
 
 /* Completed */
 #completed-tasks .form__label {
-  text-decoration: line-through
+  text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
 .form__input--transparent {
-  display: none
+  display: none;
 }
 
 .edit-mode .form__input--transparent {
   display: inline-block;
-  width: 224px
+  width: 224px;
 }
 
 .edit-mode .form__label {
